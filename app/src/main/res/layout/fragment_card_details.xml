@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragment.carddetails.CardDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35dp">
+
+        <ImageView
+            android:id="@+id/card_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/gradient_bg"
+            android:layout_width="@dimen/gradient_width"
+            android:layout_height="@dimen/gradient_height"
+            app:layout_constraintBottom_toBottomOf="@id/card_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/gradient_app_background_color" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/card_info_back_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/primary_color"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="@id/card_img"
+            app:layout_constraintTop_toTopOf="@id/card_img"
+            app:tint="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="40dp"
+            android:textAppearance="@style/CardImgTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/card_img"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_flavor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_img"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_short_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_flavor"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_short_info"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_set"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_faction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_type"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_rarity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_faction"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_attack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_rarity"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_attack"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_health"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:textAppearance="@style/CardDescription"
+            app:layout_constraintStart_toStartOf="@id/card_flavor"
+            app:layout_constraintTop_toBottomOf="@id/card_cost"
+            tools:text="" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
