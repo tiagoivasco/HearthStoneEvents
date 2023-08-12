@@ -55,6 +55,7 @@ android {
 
 dependencies {
 
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     val coil_version = "2.2.2"
     val lifecycle_version = "2.6.1"
     val hilt_version = "2.43.2"
@@ -70,8 +71,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")
     testImplementation("junit:junit:4.13.2")
+    testImplementation("io.mockk:mockk:1.12.7")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation("org.mockito:mockito-core:2.25.0")
+    androidTestImplementation("org.mockito:mockito-android:2.24.5")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
